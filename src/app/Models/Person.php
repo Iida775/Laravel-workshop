@@ -28,6 +28,6 @@ class Person extends Model
 
     public function board()
     {
-        return $this->hasOne('App\Models\Board');
+        return $this->hasMany('App\Models\Board');
     }
 }
