@@ -11,7 +11,9 @@ use Illuminate\Database\Eloquent\Builder;
 
 class Person extends Model
 {
-    protected $guarded = array('id');//idなどのDBで勝手に降られる値を用意しなくてもエラーにならないようになる
+    protected $guarded = array('id');//idなどのDBで勝手にふられる値を用意しなくてもエラーにならないようになる
+
+    public $timestamps = false; //created_at、updated_atのカラムを自動で更新しないようにする
 
     public static $rules = array(
         'name' => 'required',
