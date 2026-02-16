@@ -38,7 +38,7 @@ class PersonController extends Controller
 
     public function create(Request $request)
     {
-        $this->validate($request, Person::$rules);
+        $request->validate(Person::$rules); 
         $person = new Person;
         $form = $request->all();
         unset($form['_token']);
